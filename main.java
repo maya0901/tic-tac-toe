@@ -19,11 +19,11 @@ class TicTacToe
          while(!gameOver)
           {
             printBoard(board);
-            System.out.println("Player "+player+"enter: ");
+            System.out.println("Player "+player+" enter: ");
             int row = sc.nextInt();
             int col = sc.nextInt();
 
-            if(board[row][col] == '')
+            if(board[row][col] == ' ')
              {
               board[row][col] = player;
               gameOver = hasWon(board,player);
@@ -34,7 +34,7 @@ class TicTacToe
               }
               if(gameOver)
                {
-                System.out.println("Player "+player+"has won!");
+                System.out.println("Player "+player+" has won!");
                }
                else
                player = (player == 'X')?'O':'X'; //switch players
